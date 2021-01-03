@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<form name="newad" method="post" enctype="multipart/form-data" action="">
+<title>SellCart</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<script>
+
+var loadFile= function(event){
+    var image = document.getElementById("output");
+    image.src = URL.createObjectURL(event.target.files[0]);
+}
+
+</script>
+
+<header class="main-header">
+    <nav class="nav main-nav">
+        <ul>
+            <li><a href="index.html">BACK TO LOGIN</a></li>
+            <li><a href="">ADD PRODUCT</a></li>
+            <li><a href="">ABOUT</a></li>
+        </ul>
+    </nav>
+    <h1 class="band-name band-name-large">SellCart</h1>
+    <div class="inner-form">
+        
+      </div>
+</header>
+
+<body>
+
+<section class="formdata">
+    <h1>Add Product Details</h1>
+<table>
+<img id="output" src="Images/blank.png" width="200" height="200" />
+<tr><td><input type="file" style="padding-bottom: 20px" name="image" id="file" onchange="loadFile(event)" required></td></tr>
+</table>
+
+<form action="" method="post" role="form" enctype="multipart/form-data">
+
+  <div class="form-group">
+    <input type="text" class="form-control" name="firstName" placeholder="Company Name" required>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="phno" placeholder="Product Name" required>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="em" placeholder="Description">
+  </div>
+
+  <div class="form-group">
+    <input type="number" class="form-control" name="bookName" placeholder="Price (Rs)" required>
+  </div>
+
+  <button type="submit" style="font-size: large;" id="save-prof" class="btn btn-primary">Add </button>
+</form>
+
+</section>
+
+<footer class="main-footer">
+    <div class="container main-footer-container">
+        <h3 class="band-name">SellCart</h3>
+        <ul class="nav footer-nav">
+            <li>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="Images/YouTube Logo.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="Images/i.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="Images/Facebook Logo.png">
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

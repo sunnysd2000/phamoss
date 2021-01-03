@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DoctorInfo </title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="styles.css" />
+
+        <style>
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              max-width: 300px;
+              margin: 50px;
+              text-align: center;
+              font-family: arial;
+            }
+            
+            .title {
+              color: grey;
+              font-size: 12px;
+            }
+            
+            #contact {
+              border: none;
+              outline: 0;
+              display: inline-block;
+              padding: 8px;
+              color: white;
+              background-color: #000;
+              text-align: center;
+              cursor: pointer;
+              width: 100%;
+              font-size: 12px;
+            }
+            
+            
+            button:hover, a:hover {
+              opacity: 0.7;
+            }
+            </style>
+    </head>
+    <body>
+        <script>
+            function myFunction() {
+            var input, filter, cards, cardContainer, title, i;
+            input = document.getElementById("myFilter");
+            filter = input.value.toUpperCase();
+            cards = document.getElementsByClassName("card");
+            for (i = 0; i < cards.length; i++) {
+                title = cards[i].querySelector("h1");
+
+                if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } 
+                else {
+                cards[i].style.display = "none";
+                }
+            }
+          }
+
+
+
+
+        </script>
+        <header class="main-header">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="index.html">BACK TO LOGIN</a></li>
+                    <li><a href="drProfiles.html">PROFILES</a></li>
+                    <li><a href="">ABOUT</a></li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">DoctorInfo</h1>
+            <div class="inner-form">
+                <div class="input-field first-wrap">
+                    <input type="text" id="myFilter" style="height: 30px;" onkeyup="myFunction()" placeholder="Search">
+                </div>
+                
+              </div>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">Doctors</h2>
+            <div class="shop-items" id="new-items">
+                <div class="card">
+                    <img src="Images/Alistair_Haskey.png" alt="John" style="width:100% ;">
+                    <h1>Alistair Haskey</h1>
+                    <p class="title">MBBS, MD (Medicine)</p>
+                    <p>General Practioner</p>
+                    <p id="contact"><strong>Address  : </strong>1314 5a Ave N, Lethbridge
+                        <br><br><strong>Phone  : </strong>403-634-8503
+                        <br><br><strong>Email  : </strong>info@ahaskey.org
+                    </p>
+                  </div>
+                  <div class="card">
+                    <img src="Images/Daniel_Granger.png" alt="John" style="width:100%">
+                    <h1>Daniel Granger</h1>
+                    <p class="title">BDS, MDS (Prostodontist)</p>
+                    <p>Dentistry</p>
+                    
+                    <p id="contact"><strong>Address  : </strong>31 Gainsborough Rd, Toronto
+                        <br><br><strong>Phone  : </strong>413-838-3334
+                        <br><br><strong>Email  : </strong>info@dgranger.org
+                    </p>
+                  </div>
+                  <div class="card">
+                    <img src="Images/Karen_Hollins.png" alt="John" style="width:100% ">
+                    <h1>Karen Hollins</h1>
+                    <p class="title">MBBS, MD (Anaes)</p>
+                    <p>Anaesthesiology</p>
+                    <p id="contact"><strong>Address  : </strong>719 2e Av, Quebec   
+                        <br><br><strong>Phone  : </strong>453-878-5432
+                        <br><br><strong>Email  : </strong>info@khollins.org
+                    </p>
+                  </div>
+                  <div class="card">
+                    <img src="Images/Sid_Vere.jpg" alt="John" style="width:100%;">
+                    <h1>Sid Vere</h1>
+                    <p class="title">MBBS MS (Ophyhalmology)</p>
+                    <p>Ophyhalmology</p>
+                    <p id="contact"><strong>Address  : </strong>11 CP Colony, Calagary
+                        <br><br><strong>Phone  : </strong>425-838-1374
+                        <br><br><strong>Email  : </strong>info@svere.org
+                    </p>
+                  </div>
+            </div>
+        </section>
+        
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">DoctorInfo</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="Images/YouTube Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="Images/i.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="Images/Facebook Logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

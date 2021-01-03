@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ProductCart </title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="productDetails.js" async></script>
+    </head>
+    <body>
+        <script>
+            function myFunction() {
+            var input, filter, cards, cardContainer, title, i;
+            input = document.getElementById("myFilter");
+            filter = input.value.toUpperCase();
+            //cardContainer = document.getElementsByClassName("shop-items");
+            cards = document.getElementsByClassName("container content-section");
+            for (i = 0; i < cards.length; i++) {
+                title = cards[i].querySelector("h2");
+
+                if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } 
+                else {
+                cards[i].style.display = "none";
+                }
+            }
+          }
+
+
+
+
+        </script>
+        <header class="main-header">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="index.html">BACK TO LOGIN</a></li>
+                    <li><a href="productDetails.html">PRODUCTS</a></li>
+                    <li><a href="createProfile.html">PROFILE</a></li>
+                </ul>
+            </nav>
+            <h1 class="band-name band-name-large">ProductCart</h1>
+            <div class="inner-form">
+                <div class="input-field first-wrap">
+                    <input type="text" id="myFilter" style="height: 32px;;" onkeyup="myFunction()" placeholder="Search">
+                </div>
+            
+              </div>
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">Prime Dental Products Pvt Ltd</h2>
+            <div class="shop-items" id="new-items">
+                <div class="shop-item" id="item-no">
+                    <span class="shop-item-title">Waldent Alberto Airotor</span>
+                    <img class="shop-item-image" src="Images/airotor-4_alberto.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs 4000</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item" id="item-no">
+                    <span class="shop-item-title">Patient Apron</span>
+                    <img class="shop-item-image" src="Images/apron.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs 100</span>
+                        <button class="btn btn-primary shop-item-button"type="button"> ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item" id="item-no">
+                    <span class="shop-item-title">Saliva Ejector</span>
+                    <img class="shop-item-image" src="Images/ejector.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs 150</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item" id="item-no">
+                    <span class="shop-item-title">Contactless Infrared Thermometer</span>
+                    <img class="shop-item-image" src="Images/contactless-infrared-thermometer.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs 1500</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">Rident Denpro Pvt Ltd</h2>
+            <div class="shop-items" id="new-items">
+                <div class="shop-item" id="item-no">
+                    <span class="shop-item-title">ChlorHex Mouthwash</span>
+                    <img class="shop-item-image" src="Images/mouth-wash-3.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs 500</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item" id="item-no">
+                    <span class="shop-item-title">Waldent BESTEtch</span>
+                    <img class="shop-item-image" src="Images/bestetch_2.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs 120</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">TEi Dental India Ltd</h2>
+            <div class="shop-items" id="new-items">
+                <div class="shop-item" id="item-no">
+                    <span class="shop-item-title">UDG Ceramic Bracket Kit</span>
+                    <img class="shop-item-image" src="Images/udg-ceramic-brackets.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs 995</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item" id="item-no">
+                    <span class="shop-item-title"> Eezee Portable Dental Chair</span>
+                    <img class="shop-item-image" src="Images/portable-dental-chair-13.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs 18000 </span>
+                        <button class="btn btn-primary shop-item-button"type="button"> ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container content-section">
+            <h3 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">Rs 0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">ProductCart</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="Images/YouTube Logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="Images/i.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="Images/Facebook Logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
